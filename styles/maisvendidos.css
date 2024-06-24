@@ -1,0 +1,12 @@
+.mais-vendidos-titulo{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--laranja);
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+@media screen and (min-width: 1728px){
+    
+}

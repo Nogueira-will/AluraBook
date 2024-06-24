@@ -1,0 +1,177 @@
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.cabecalho-menu-hamburgueria {
+    background-image: url("../imagens/Menu.svg");
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container-imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+
+.container-botao{
+    display: none;
+}
+
+.container-botao:checked~.container-rotulo>.cabecalho-menu-hamburgueria{
+    background: url(../imagens/MenuAberto.svg) no-repeat;
+    background-position: center;
+}
+
+.container-botao:checked~.container-rotulo{
+    background: var(--azul-degrade);
+}
+
+.container-botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu-titulo,
+.lista-menu-item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu-titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu-link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.container-titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+.container-texto{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .container-titulo, .container-titulo-negrito{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container-titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container-titulo-negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes-item{
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes-link{
+        text-decoration: none;
+        color: var(--preto);
+
+    }
+
+    .container-imagem-transparente{
+        display: none;
+    }
+
+    .cabecalho-menu-hamburgueria{
+        display: none;
+    }
+
+    .opcoes-botao:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+    }        
+
+    .opcoes-botao{
+        display: none;
+    }
+
+    .opcoes-botao:checked~.opcoes-rotulo>.opcoes-item{
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opcoes-item{
+        padding: 2em 1em;
+    }
+    
+    .lista-menu-item{
+        padding: 1em 2.5em;
+    }
+
+    .lista-menu-item:hover{
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu-item:hover>.lista-menu-link{
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+
+} 
+
+@media screen and (min-width:1728px){
+    .container-texto{
+        display: block;
+    }
+    
+    .container-link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+        font-size: 20px;
+    }
+
+    .cabecalho{
+        padding: 0 2em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+
+    .container-titulo{
+        margin-right: 1em;
+    }
+}
